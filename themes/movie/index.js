@@ -21,8 +21,8 @@ import { BlogListScroll } from './components/BlogListScroll'
 import BlogRecommend from './components/BlogRecommend'
 import CategoryGroup from './components/CategoryGroup'
 import CategoryItem from './components/CategoryItem'
-//import { Footer } from './components/Footer'
-//import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
 import { HomeBackgroundImage } from './components/HomeBackgroundImage'
 import JumpToTopButton from './components/JumpToTopButton'
 import LatestPostsGroup from './components/LatestPostsGroup'
@@ -101,6 +101,7 @@ const LayoutBase = props => {
             </div>
           </div>
         </div>
+
         {/* 搜索框 */}
         <AlgoliaSearchModal cRef={searchModal} {...props} />
 
