@@ -29,12 +29,11 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
           <div className='absolute bottom-28 z-20'>
             {post?.tagItems && post?.tagItems.length > 0 && (
               <>
-/*                 <div className='px-6 justify-between flex p-2'>
-                  {post.tagItems.map(tag => (
-                    <TagItemMini key={tag.name} tag={tag} />
-                  ))}
-                </div>
-*/
+//                 <div className='px-6 justify-between flex p-2'>
+//                {post.tagItems.map(tag => (
+//                  <TagItemMini key={tag.name} tag={tag} />
+//                ))}
+//                </div>
               </>
             )}
           </div>
