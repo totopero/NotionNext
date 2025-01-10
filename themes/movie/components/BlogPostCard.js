@@ -25,18 +25,8 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               alt={post.title}
               className='h-full w-full group-hover:brightness-90 group-hover:scale-105 transform object-cover duration-500'
             />
-//           </div>
-//           <div className='absolute bottom-28 z-20'>
-//             {post?.tagItems && post?.tagItems.length > 0 && (
-//               <>
-//                 <div className='px-6 justify-between flex p-2'>
-//                {post.tagItems.map(tag => (
-//                  <TagItemMini key={tag.name} tag={tag} />
-//                ))}
-//                </div>
-//               </>
-//             )}
-          </div>
+       </div>
+
           {/* 阴影遮罩 */}
           <h2 className='absolute bottom-10 px-6 transition-all duration-200 text-2xl font-semibold break-words shadow-text z-20'>
             {siteConfig('POST_TITLE_ICON') && (
@@ -44,10 +34,6 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             )}
             {post.title}
           </h2>
-//
-//          <p className='absolute bottom-3 z-20 line-clamp-1 text-xs mx-6'>
-//            {post?.summary}
-//          </p>
 
           <div className='h-3/4 w-full absolute left-0 bottom-0 z-10'>
             <div className='h-full w-full absolute opacity-80 group-hover:opacity-100 transition-all duration-1000 bg-gradient-to-b from-transparent to-black'></div>
