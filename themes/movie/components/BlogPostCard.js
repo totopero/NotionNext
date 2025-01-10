@@ -17,7 +17,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
       className='wow fadeInUp w-full mb-4 cursor-pointer overflow-hidden shadow-movie dark:bg-hexo-black-gray text-white'>
       <Link href={post?.href} passHref legacyBehavior>
         {/* 固定高度 ，空白用图片拉升填充 */}
-        <div className='group flex flex-col aspect-[2/3] justify-between relative'>
+        <div className='group flex flex-col aspect-[1/1] justify-between relative'>
           {/* 图片 填充卡片 */}
           <div className='flex flex-grow w-full h-full relative duration-200  cursor-pointer transform overflow-hidden'>
             <LazyImage
