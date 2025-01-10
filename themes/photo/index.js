@@ -390,7 +390,7 @@ const Layout404 = props => {
         </div>
       </div>
       {/* 底部导航 */}
-      <div className='h-full flex-grow grid grid-cols-4 gap-1'>
+      <div className='h-full flex-grow grid grid-cols-4'>
         <LatestPostsGroup {...props} />
         <CategoryGroup {...props} />
         <ArchiveDateList {...props} />
