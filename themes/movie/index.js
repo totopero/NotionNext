@@ -70,8 +70,8 @@ const LayoutBase = props => {
         <Style />
 
         {/* 页头 */}
-        <Header {...props} />
-        {headerSlot}
+  //      <Header {...props} />
+  //      {headerSlot}
 
         {/* 主体 */}
         <div id='container-inner' className='w-full relative flex-grow z-10'>
