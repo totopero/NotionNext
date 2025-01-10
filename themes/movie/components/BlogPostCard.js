@@ -26,7 +26,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               className='h-full w-full group-hover:brightness-90 group-hover:scale-105 transform object-cover duration-500'
             />
           </div>
-
+/* 
           <div className='absolute bottom-28 z-20'>
             {post?.tagItems && post?.tagItems.length > 0 && (
               <>
@@ -38,6 +38,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
               </>
             )}
           </div>
+*/
           {/* 阴影遮罩 */}
           <h2 className='absolute bottom-10 px-6 transition-all duration-200 text-2xl font-semibold break-words shadow-text z-20'>
             {siteConfig('POST_TITLE_ICON') && (
