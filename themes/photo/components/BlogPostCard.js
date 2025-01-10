@@ -39,12 +39,12 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             )}
           </div>
           {/* 阴影遮罩 */}
-          <h2 className='absolute bottom-10 px-6 transition-all duration-200 text-2xl font-semibold break-words shadow-text z-20'>
+          <h4 className='absolute bottom-10 px-6 transition-all duration-200 text-2xl font-semibold break-words shadow-text z-20'>
             {siteConfig('POST_TITLE_ICON') && (
               <NotionIcon icon={post.pageIcon} />
             )}
             {post.title}
-          </h2>
+          </h4>
 
           <p className='absolute bottom-3 z-20 line-clamp-1 text-xs mx-6'>
             {post?.summary}
