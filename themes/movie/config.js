@@ -6,7 +6,7 @@ const CONFIG = {
   MOVIE_MENU_CATEGORY: true, // 显示分类
   MOVIE_MENU_TAG: true, // 显示标签
   MOVIE_MENU_ARCHIVE: true, // 显示归档
-  MOVIE_MENU_SEARCH: true, // 显示搜索
+  MOVIE_MENU_SEARCH: false, // 显示搜索
   MOVIE_HOME_BACKGROUND: false, // 首页是否显示背景图, 默认关闭
 
   MOVIE_PREVIEW_CATEGORY_COUNT: 0, // 首页最多展示的分类数量，0为不限制
