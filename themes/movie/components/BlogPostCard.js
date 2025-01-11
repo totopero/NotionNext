@@ -27,7 +27,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
             />
        </div>
           <div className='h-3/4 w-full absolute left-0 bottom-0 z-10'>
-            <div className='h-full w-full absolute opacity-80 group-hover:opacity-100 transition-all duration-1000 bg-gradient-to-b from-transparent to-black'></div>
+            <div className='h-full w-full absolute opacity-80 group-hover:opacity-100 transition-all duration-1000'></div>
           </div>
         </div>
       </Link>
