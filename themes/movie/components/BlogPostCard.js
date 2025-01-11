@@ -14,7 +14,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
   return (
     <article
       data-wow-delay='.2s'
-      className='wow fadeInUp w-full mb-4 cursor-pointer overflow-hidden shadow-movie dark:bg-hexo-black-gray text-white'>
+      className='wow fadeInUp w-full mb-4 cursor-pointer overflow-hidden shadow-movie text-white'>
       <Link href={post?.href} passHref legacyBehavior>
         {/* 固定高度 ，空白用图片拉升填充 */}
         <div className='group flex flex-col aspect-[1/1] justify-between relative'>
