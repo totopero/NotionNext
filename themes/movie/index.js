@@ -453,8 +453,6 @@ const LayoutCategoryIndex = props => {
   return (
     <>
       <div id='category-list' className='duration-200 flex flex-wrap'>
-       {categoryOptions?.map(category => (
-   //      <CategoryItem key={category.name} category={category} />
         ))}
       </div>
     </>
@@ -471,8 +469,6 @@ const LayoutTagIndex = props => {
   return (
     <>
    <div id='tags-list' className='duration-200 flex flex-wrap'>
-      {tagOptions.map(tag => (
-   //     <TagItem key={tag.name} tag={tag} />
         ))}
       </div>
     </>
