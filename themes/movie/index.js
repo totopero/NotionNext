@@ -451,11 +451,6 @@ const LayoutArchive = props => {
 const LayoutCategoryIndex = props => {
   const { categoryOptions } = props
   return (
-    <>
-      <div id='category-list' className='duration-200 flex flex-wrap'>
-        ))}
-      </div>
-    </>
   )
 }
 
@@ -467,11 +462,6 @@ const LayoutCategoryIndex = props => {
 const LayoutTagIndex = props => {
   const { tagOptions } = props
   return (
-    <>
-   <div id='tags-list' className='duration-200 flex flex-wrap'>
-        ))}
-      </div>
-    </>
   )
 }
 
