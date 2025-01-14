@@ -109,45 +109,55 @@ export default function Modal(props) {
                 </div>
 
                 {/* </div> */}
+export const ArticleInfo = (props) => {
+  const { post } = props
 
-                <Link href={modalContent?.href}>
-                  <LazyImage
-                    onLoad={handleImageLoad}
-                    placeholderSrc={thumbnail}
-                    src={bigImage}
-                    ref={imgRef}
-                    className={`w-full select-none max-w-7xl max-h-[90vh] shadow-xl  animate__animated animate__fadeIn'`}
-                  />
-                </Link>
+  const emailHash = md5(siteConfig('CONTACT_EMAIL', '#'))
 
-                <>
-                  <div className='absolute bottom-0 left-0 m-4 z-20'>
-                    <div className='flex'>
-                      <h2
-                        style={{ textShadow: '0.1em 0.1em 0.2em black' }}
-                        className='text-2xl md:text-5xl text-white mb-4 px-2 py-1 rounded-lg'>
-                        {modalContent?.title}
-                      </h2>
-                    </div>
-                    <div
-                      style={{ textShadow: '0.1em 0.1em 0.2em black' }}
-                      className={
-                        'line-clamp-3 md:line-clamp-none overflow-hidden cursor-pointer text-gray-50 rounded-lg m-2'
-                      }>
-                      {modalContent?.summary}
-                    </div>
+  return <section className="flex-wrap flex mt-2 text-gray--600 dark:text-gray-400 font-light leading-8">
+        <div>
 
-                    {modalContent?.category && (
-                      <div className='flex'>
-                        <Link
-                          href={`/category/${modalContent?.category}`}
-                          className='text-xs rounded-lg mt-3 px-2 py-1 bg-black bg-opacity-20 text-white hover:bg-blue-700 hover:text-white duration-200'>
-                          {modalContent?.category}
-                        </Link>
-                      </div>
-                    )}
-                  </div>
+            <h1 className="font-bold text-3xl text-black dark:text-white">
+                {siteConfig('POST_TITLE_ICON') && <NotionIcon icon={post?.pageIcon} />}{post?.title}
+            </h1>
 
+            {post?.type !== 'Page' && <>
+            <nav className="flex mt-7 items-start text-gray-500 dark:text-gray-400">
+            <div className="flex mb-4">
+              <a href={siteConfig('CONTACT_GITHUB') || '#'} className="flex">
+                <Image
+                  alt={siteConfig('AUTHOR')}
+                  width={24}
+                  height={24}
+                  src={`https://gravatar.com/avatar/${emailHash}`}
+                  className="rounded-full"
+                />
+                <p className="ml-2 md:block">{siteConfig('AUTHOR')}</p>
+              </a>
+              <span className="block">&nbsp;/&nbsp;</span>
+            </div>
+            <div className="mr-2 mb-4 md:ml-0">
+              {post?.publishDay}
+            </div>
+            {post?.tags && (
+              <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
+                {post?.tags.map(tag => (
+                  <TagItem key={tag} tag={tag} />
+                ))}
+              </div>
+            )}
+            <span className="hidden busuanzi_container_page_pv mr-2">
+                    <i className='mr-1 fas fa-eye' />
+                    &nbsp;
+                    <span className="mr-2 busuanzi_value_page_pv" />
+                </span>
+             </nav>
+            </>}
+
+        </div>
+
+    </section>
+}
                   {/* 卡片的阴影遮罩，为了凸显图片上的文字 */}
                   <div className='h-1/2 w-full absolute left-0 bottom-0'>
                     <div className='h-full w-full absolute opacity-80 group-hover:opacity-100 transition-all duration-1000 bg-gradient-to-b from-transparent to-black'></div>
