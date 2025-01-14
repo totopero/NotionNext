@@ -69,10 +69,6 @@ const LayoutBase = props => {
         className={`${siteConfig('FONT_STYLE')} dark:text-gray-300 duration-300 transition-all bg-white dark:bg-[#2A2A2A] scroll-smooth min-h-screen flex flex-col justify-between`}>
         <Style />
 
-      /*  { 页头 }
-        <Header {...props} />
-        {headerSlot}
-*/
         {/* 主体 */}
         <div id='container-inner' className='w-full relative flex-grow z-10'>
           <div
