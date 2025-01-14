@@ -42,7 +42,7 @@ const Style = () => {
 
       .notion-carousel div {
         height: auto !important;
-        aspect-ratio: 2/1 !important;
+        aspect-ratio: 1/1 !important;
       }
     `}</style>
   )
