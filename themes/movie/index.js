@@ -451,6 +451,13 @@ const LayoutArchive = props => {
 const LayoutCategoryIndex = props => {
   const { categoryOptions } = props
   return (
+    <>
+      <div id='category-list' className='duration-200 flex flex-wrap'>
+       {categoryOptions?.map(category => (
+       <CategoryItem key={category.name} category={category} />
+        ))}
+      </div>
+    </>
   )
 }
 
@@ -462,6 +469,13 @@ const LayoutCategoryIndex = props => {
 const LayoutTagIndex = props => {
   const { tagOptions } = props
   return (
+    <>
+   <div id='tags-list' className='duration-200 flex flex-wrap'>
+      {tagOptions.map(tag => (
+       <TagItem key={tag.name} tag={tag} />
+        ))}
+      </div>
+    </>
   )
 }
 
